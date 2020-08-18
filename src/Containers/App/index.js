@@ -39,13 +39,29 @@ class App extends Component {
   }
 
   render() {
-    const { selectedQuote, deg, firstLinearColor, secondLinearColor } = this.state
+    const {
+      selectedQuote,
+      deg,
+      firstLinearColor,
+      secondLinearColor,
+    } = this.state
     if (!selectedQuote) return null
 
-    console.log(`linear-gradient(${deg}, ${firstLinearColor}, ${secondLinearColor})`)
+    console.log(
+      `linear-gradient(${deg}, ${firstLinearColor}, ${secondLinearColor})`
+    )
     return (
-      <div className={styles.root} style={{ background: `linear-gradient(${deg}deg, ${firstLinearColor}, ${secondLinearColor})` }}>
-        <Quote content={selectedQuote.quoteText} author={selectedQuote.quoteAuthor} onNext={this.nextQuote} />
+      <div
+        className={styles.root}
+        style={{
+          background: `linear-gradient(${deg}deg, ${firstLinearColor}, ${secondLinearColor})`,
+        }}
+      >
+        <Quote
+          content={selectedQuote.quoteText}
+          author={selectedQuote.quoteAuthor}
+          onNext={this.nextQuote}
+        />
       </div>
     )
   }
