@@ -47,9 +47,6 @@ class App extends Component {
     } = this.state
     if (!selectedQuote) return null
 
-    console.log(
-      `linear-gradient(${deg}, ${firstLinearColor}, ${secondLinearColor})`
-    )
     return (
       <div
         className={styles.root}
